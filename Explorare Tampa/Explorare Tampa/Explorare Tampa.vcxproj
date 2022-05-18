@@ -80,6 +80,8 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>..\..\_external\glm;..\..\_external\stb-master;..\..\_external\glfw-3.3.6.bin.WIN32\include\GLFW;..\..\_external\glew-2.2.0\include;..\..\_external\glew-2.1.0\include;..\..\_external\glm\glm;$(IncludePath)</IncludePath>
+    <LibraryPath>..\..\_external\freeglut\lib;..\..\_external\glew-2.1.0\lib\Release\Win32;..\..\_external\glfw-3.3.6.bin.WIN32\lib-vc2019;..\..\_external\glew-2.2.0\lib\Release\Win32;..\..\_external\glfw-3.3.6.bin.WIN32\lib-vc2022;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
@@ -142,11 +144,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Camera.cpp" />
     <ClCompile Include="Explorare Tampa.cpp" />
     <ClCompile Include="Mesh.cpp" />
     <ClCompile Include="ObjLoader.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Camera.h" />
     <ClInclude Include="Mesh.h" />
     <ClInclude Include="ObjLoader.h" />
   </ItemGroup>
